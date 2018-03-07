@@ -10,17 +10,17 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article1', function(req, res){
-    res.send(Article 1 is requested and will be served here);
+    res.send('Article 1 is requested and will be served here');
 });
 
 
 app.get('/article2', function(req, res){
-    res.send(Article 2 is requested and will be served here);
+    res.send('Article 2 is requested and will be served here');
 });
 
 
 app.get('/article3', function(req, res){
-    res.send(Article 3 is requested and will be served here);
+    res.send('Article 3 is requested and will be served here');
 });
 
 
