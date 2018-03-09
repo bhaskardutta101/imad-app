@@ -7,9 +7,8 @@ element.innerHTML = 'new content by innerHTML';
 
 //move image by click
 
-var img = document.getElementById('madi');
 
-img.onClick = function(){
+element.onClick = function(){
   
   img.style.marginLeft = '100px';
     
