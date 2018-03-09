@@ -1,6 +1,3 @@
-console.log('Loaded!');
-//change main content
-
 //for counter
 
 var button = document.getElemetById('counter');
