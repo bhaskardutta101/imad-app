@@ -1,6 +1,6 @@
 //for counter
 
-var button = document.getElemetById('counter');
+var button = document.getElementById('counter');
 
 button.onClick = function(){
     // create a request object
