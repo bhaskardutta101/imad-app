@@ -3,6 +3,12 @@ var element = document.getElementById('maintext');
 
 element.innerHTML = 'New value by innerHTML';
 
+var image = document.getElementById('madi');
+
+image.onClick = function(){
+    image.style.marginLeft = '100px';
+}
+
 
 
 
