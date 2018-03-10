@@ -6,41 +6,46 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-     'article-one' : {
+    
+    'article-one': {
+        
     title : `Article-One`,
     heading : `articleOne`,
     date : `8 March 2018`,
-    content : `     <p>
-        Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one.
-     </p>
-    
-     <p>
-        Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one.
-     </p>
-    
-     <p>
-        Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one.
-     </p>`
-    
-},
-     'article-two' : {
-          title : `Article-Two`,
-    heading : `articleTwo`,
-    date : `8 March 2018`,
-    content :     
-    `<p>
-        Here will be the content for artivcle-two.
-    </p>`
-     },
-     'article-three' : {
-          title : `Article-Three`,
-    heading : `articleThree`,
-    date : `8 March 2018`,
-    content : 
-    ` <p>
-        Here will be the content for artivcle-three.
-    </p>
-    `
+    content : `    
+                <p>
+                    Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one.
+                 </p>
+                
+                 <p>
+                    Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one.
+                 </p>
+                
+                 <p>
+                    Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one. Here will be the content for artivcle-one.
+                 </p>`
+                
+        },
+        
+     'article-two': {
+        title : `Article-Two`,
+        heading : `articleTwo`,
+        date : `8 March 2018`,
+        content :     
+                `<p>
+                    Here will be the content for artivcle-two.
+                </p>`
+        },
+        
+     'article-three': {
+        title : `Article-Three`,
+        heading : `articleThree`,
+        date : `8 March 2018`,
+        content : 
+                ` <p>
+                    Here will be the content for artivcle-three.
+                </p>`
+                
      }
 };
 
@@ -93,7 +98,9 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName', function(req, res){
     //articleName = article-one
+    
     //articles[articleName] = {} content object for article one
+    
     var articleName = req.params.articleName;
      res.send(createTemplate(articles[articleName]));
      
