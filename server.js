@@ -103,6 +103,22 @@ app.get('/counter', function(req, res){
 });
 
 
+var names = [];
+app.get('/submit-name/', function(req, res) { //submit-name?name=dhjcbbdhjb
+    //get the name from the request
+    
+    var name = req.query.name;
+    
+    names.push(name);
+    
+    //JSON: JAVASCRIPT OBJEST NOTATION
+    
+    res.send(JSON.stringify(names));
+    
+});
+
+
+
 app.get('/:articleName', function(req, res){
     //articleName = article-one
     
@@ -131,19 +147,6 @@ app.get('/ui/madi.png', function (req, res) {
   
 });
 
-var names = [];
-app.get('/submit-name/', function(req, res) { //submit-name?name=dhjcbbdhjb
-    //get the name from the request
-    
-    var name = req.query.name;
-    
-    names.push(name);
-    
-    //JSON: JAVASCRIPT OBJEST NOTATION
-    
-    res.send(JSON.stringify(names));
-    
-});
 
 
 /*
