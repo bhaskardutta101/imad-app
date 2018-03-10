@@ -132,6 +132,22 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var names = [];
+app.get('/submit-name/', function(req, res) { //submit-name?name=dhjcbbdhjb
+    //get the name from the request
+    
+    var name = req.query.name;
+    
+    names.push(name);
+    
+    //JSON: JAVASCRIPT OBJEST NOTATION
+    
+    res.send(JSON.stringify(names));
+    
+});
+
+
+/*
+JSON way od sending data
 app.get('/submit-name/:name', function(req, res) {
     //get the name from the request
     
@@ -144,6 +160,8 @@ app.get('/submit-name/:name', function(req, res) {
     res.send(JSON.stringify(names));
     
 });
+*/
+
 
 
 
