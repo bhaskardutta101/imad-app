@@ -1,3 +1,14 @@
+
+var element = document.getElementById('maintext');
+
+element.innerHTML = 'New value by innerHTML';
+
+
+
+
+
+
+/*
 //for counter
 
 var button = document.getElementById('counter');
@@ -21,4 +32,4 @@ button.onClick = function(){
     // not done yet
 };
 
-};
+};*/
