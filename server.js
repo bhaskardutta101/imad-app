@@ -9,7 +9,7 @@ var articles = {
     
     'article-one': {
         
-    title : `Article-One`,
+    tit : `Article-One`,
     heading : `articleOne`,
     date : `8 March 2018`,
     content : `    
@@ -28,7 +28,7 @@ var articles = {
         },
         
      'article-two': {
-        title : `Article-Two`,
+        tit : `Article-Two`,
         heading : `articleTwo`,
         date : `8 March 2018`,
         content :     
@@ -38,7 +38,7 @@ var articles = {
         },
         
      'article-three': {
-        title : `Article-Three`,
+        tit : `Article-Three`,
         heading : `articleThree`,
         date : `8 March 2018`,
         content : 
@@ -51,7 +51,7 @@ var articles = {
 
 function createTemplate (data)
 {
- var title = data.title;
+ var tit = data.tit;
  var heading = data.heading;
  var date = data.date;
  var content = data.content;
@@ -61,7 +61,7 @@ var htmlTemplate = `
     <html>
 
   <head>
-      <title> ${title} </title>
+      <title> ${tit} </title>
       <link href="/ui/style.css" rel="stylesheet" />
   </head>
   
