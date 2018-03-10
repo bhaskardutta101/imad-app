@@ -49,20 +49,17 @@ submit.onclick = function() {
                  //capture a list of names and make it a list
                 
                 var names = request.responseText;
-                name = JSON.parse(names);
+                names = JSON.parse(names);
                 var list = '';
-                for(i=0; i<names.length; i++){
+                for(var i=0; i<names.length; i++){
                     list+= '<li>' + names[i] + '</li>';
         
         }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
-               
-        
-        
-            }
-        }
-        //not done yet
+                    var ul = document.getElementById('namelist');
+                    ul.innerHTML = list;
+                    }
+                }
+                //not done yet
     };
     // make the request
     var nameInput = document.getElementById('name');
