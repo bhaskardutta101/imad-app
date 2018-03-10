@@ -31,8 +31,7 @@ button.onclick = function(){
 
 //submit name
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submitbutton');
 
 submit.onclick = function() {
@@ -66,6 +65,8 @@ submit.onclick = function() {
         //not done yet
     };
     // make the request
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET', 'http://bitudutta101.imad.hasura-app.io/submit-name?name=' + name, true);
     request.send(null);
     
@@ -87,4 +88,4 @@ submit.onclick = function() {
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;
     
-}
+};
