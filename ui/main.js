@@ -1,48 +1,26 @@
 
-var element = document.getElementById('maintext');
 
-element.innerHTML = 'New value by innerHTML';
-
-var image = document.getElementById('madi');
-
-var marginLeft = 0;
-function moveRight(){
-    marginLeft = marginLeft + 1;
-    image.style.marginLeft = marginLeft + 'px';
-}
-
-image.onclick = function(){
-    var interval = setInterval(moveRight, 50);
-
-};
-
-
-
-
-
-
-/*
 //for counter
 
 var button = document.getElementById('counter');
+var counter = 0;
 
 button.onClick = function(){
     // create a request object
     
-    var request = new XMLHttpRequest();
     
-    // capture the response and store it ina varianle
+    // capture the response and store it in a varianle
     
-    request.onreadystateChange = function(){
+    //render the variable in the correct span      
+            counter= counter + 1;
+            var span = document.getElementById('times');
+            span.innerHTML = counter.toString();
+        
+
+};
+/*
+ request.onreadystateChange = function(){
         if(request.readystate === XMLHttpRequest.DONE){
             // take some action
             if(request.status === 200){
-            var counter = request.responseText;
-            var span = document.getElementById('times');
-            span.innerHTML = counter.toString();
-        }
-    }
-    // not done yet
-};
-
-};*/
+            var counter = request.responseText;*/
