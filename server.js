@@ -150,8 +150,8 @@ app.get('/articles/:articleName', function(req, res){
     
     //articles[articleName] = {} content object for article one
     
-    
-    pool.query("SELECT * FROM article where title = " + req.params.articleName, function(err, result)
+    //select * from article where title = 'article-one'
+    pool.query("SELECT * FROM article where title = '" + req.params.articleName + "' ", function(err, result)
     {
         if(err)
         {
